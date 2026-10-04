@@ -37,7 +37,7 @@ function deepEqual(objA, objB) {
   return true;
 }
 
-// Test cases from your screenshot
+
 console.log(deepEqual({ a: 1, b: { c: 2 } }, { a: 1, b: { c: 2 } })); // true
 console.log(deepEqual({ a: 1, b: { c: 2 } }, { a: 1, b: { c: 3 } })); // false
 console.log(deepEqual({ a: 1 }, { a: 1, b: 2 })); // false
