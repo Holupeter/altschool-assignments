@@ -344,5 +344,60 @@
         </div>
     </section>
 
+    <!-- Trim URL Form Section -->
+    <section class="trim-section" id="urls">
+        <!-- Background Ambient Aurora Shapes (Pure CSS Glows or Background Image Hook) -->
+        <div class="trim-bg-shapes" aria-hidden="true">
+            <div class="trim-shape trim-shape-left"></div>
+            <div class="trim-shape trim-shape-right"></div>
+        </div>
+
+        <div class="trim-card">
+            <form class="trim-form" onsubmit="event.preventDefault();">
+                <!-- URL Input -->
+                <div class="form-group">
+                    <input type="url" class="form-control" placeholder="Paste URL here..." required>
+                </div>
+
+                <!-- Domain & Alias Row -->
+                <div class="form-row">
+                    <div class="form-group select-group">
+                        <select class="form-control form-select">
+                            <option value="" disabled selected>Choose Domain</option>
+                            <option value="scissor.ly">scissor.ly</option>
+                            <option value="tiny.cc">tiny.cc</option>
+                            <option value="custom">Custom Domain</option>
+                        </select>
+                        <svg class="select-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#3284FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <div class="form-group alias-group">
+                        <input type="text" class="form-control" placeholder="Type Alias here">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn primary-btn btn-trim">
+                    <span>Trim URL</span>
+                    <svg class="magic-wand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m19 11-4-7"></path>
+                        <path d="m2 22 10-10"></path>
+                        <path d="m14 14 1-1"></path>
+                        <path d="m18 10 1-1"></path>
+                        <path d="m9 5 3 3"></path>
+                        <path d="m5 9 3 3"></path>
+                    </svg>
+                </button>
+
+                <!-- Disclaimer Text -->
+                <p class="trim-disclaimer">
+                    By clicking TrimURL, I agree to the <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and <a href="#">Use of Cookies</a>.
+                </p>
+            </form>
+        </div>
+    </section>
+
 </body>
 </html>

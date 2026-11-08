@@ -717,6 +717,179 @@ a {
 }
 
 /* ==========================================================================
+   Trim URL Form Section
+   ========================================================================== */
+.trim-section {
+    position: relative;
+    width: 100%;
+    min-height: 523px;
+    background: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 24px;
+    overflow: hidden;
+}
+
+/* Background Ribbon Aurora Glows */
+.trim-bg-shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.trim-shape {
+    position: absolute;
+    border-radius: 40px;
+    filter: blur(40px);
+}
+
+.trim-shape-left {
+    width: 600px;
+    height: 500px;
+    left: -200px;
+    top: -150px;
+    background: linear-gradient(135deg, rgba(0, 90, 226, 0.45) 0%, rgba(115, 230, 255, 0.2) 60%, transparent 100%);
+    transform: rotate(-35deg);
+    opacity: 0.7;
+}
+
+.trim-shape-right {
+    width: 700px;
+    height: 600px;
+    right: -250px;
+    bottom: -200px;
+    background: linear-gradient(315deg, rgba(0, 90, 226, 0.5) 0%, rgba(158, 230, 247, 0.25) 50%, transparent 100%);
+    transform: rotate(25deg);
+    opacity: 0.75;
+}
+
+/* Trim Form Card */
+.trim-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 476px;
+    background: var(--neutral-white);
+    border-radius: 12px;
+    padding: 42px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.trim-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #3284FF;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-main);
+    background-color: var(--neutral-white);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: #3284FF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: #005AE2;
+    box-shadow: 0 0 0 3px rgba(50, 132, 255, 0.15);
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.select-group {
+    position: relative;
+    flex: 1.1;
+}
+
+.alias-group {
+    flex: 0.9;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #3284FF;
+    font-size: 14px;
+    padding-right: 36px;
+}
+
+.select-chevron {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Trim Button */
+.btn-trim {
+    width: 100%;
+    height: 48px;
+    background: var(--primary-400);
+    border: none;
+    border-radius: 100px;
+    color: var(--neutral-white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-trim:hover {
+    background: #004ecc;
+    box-shadow: 0 4px 14px rgba(0, 90, 226, 0.35);
+}
+
+.magic-wand-icon {
+    flex-shrink: 0;
+}
+
+/* Disclaimer text */
+.trim-disclaimer {
+    font-size: 14px;
+    line-height: 20px;
+    color: #4991FF;
+    font-weight: 500;
+    margin: 0;
+}
+
+.trim-disclaimer a {
+    color: #4991FF;
+    text-decoration: underline;
+}
+
+.trim-disclaimer a:hover {
+    color: var(--primary-400);
+}
+
+/* ==========================================================================
    Responsive Queries
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -815,6 +988,14 @@ a {
 
     .stats-heading h2 {
         font-size: 32px;
+    }
+
+    .trim-card {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
     }
 }
 
