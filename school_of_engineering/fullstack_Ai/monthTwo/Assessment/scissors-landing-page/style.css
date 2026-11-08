@@ -1187,21 +1187,14 @@ a {
     z-index: 1;
 }
 
-.footer-bg-glow {
+.footer-glow-right-svg {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(90px);
+    right: 0;
+    bottom: 0;
+    max-height: 380px;
+    width: auto;
     pointer-events: none;
     z-index: 1;
-}
-
-.footer-glow-right {
-    width: 550px;
-    height: 550px;
-    right: -200px;
-    bottom: 50px;
-    background: linear-gradient(315deg, rgba(158, 230, 247, 0.22) 0%, rgba(0, 90, 226, 0.1) 100%);
-    opacity: 0.7;
 }
 
 .footer-container {
