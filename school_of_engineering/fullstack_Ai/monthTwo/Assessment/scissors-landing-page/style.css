@@ -367,7 +367,7 @@ a {
 
 }
 
-/* Pedestal / Ground Base (Group 3 in Figma) */
+/* Pedestal / Ground Base (Group 3: Rectangle 9 & Ellipse 1 in Figma) */
 .hero-pedestal {
     position: relative;
     width: 100%;
@@ -379,10 +379,23 @@ a {
     z-index: 1;
 }
 
-.pedestal-img {
+.pedestal-rectangle {
     width: 100%;
     max-width: 1440px;
     height: auto;
+    display: block;
+}
+
+.pedestal-ellipse {
+    position: absolute;
+    width: 67%;
+    max-width: 964px;
+    height: auto;
+    top: 21.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 2;
     display: block;
 }
 
