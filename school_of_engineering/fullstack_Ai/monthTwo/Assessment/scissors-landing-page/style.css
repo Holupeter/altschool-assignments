@@ -764,39 +764,25 @@ a {
     overflow: hidden;
 }
 
-/* Background Ribbon Aurora Glows */
-.trim-bg-shapes {
+/* Waves */
+.trim-wave-left {
     position: absolute;
-    inset: 0;
+    left: -85px;
+    top: 0;
+    height: 523px;
+    width: auto;
     pointer-events: none;
-    overflow: hidden;
     z-index: 1;
 }
 
-.trim-shape {
+.trim-wave-right {
     position: absolute;
-    border-radius: 40px;
-    filter: blur(40px);
-}
-
-.trim-shape-left {
-    width: 600px;
-    height: 500px;
-    left: -200px;
-    top: -150px;
-    background: linear-gradient(135deg, rgba(0, 90, 226, 0.45) 0%, rgba(115, 230, 255, 0.2) 60%, transparent 100%);
-    transform: rotate(-35deg);
-    opacity: 0.7;
-}
-
-.trim-shape-right {
-    width: 700px;
-    height: 600px;
-    right: -250px;
-    bottom: -200px;
-    background: linear-gradient(315deg, rgba(0, 90, 226, 0.5) 0%, rgba(158, 230, 247, 0.25) 50%, transparent 100%);
-    transform: rotate(25deg);
-    opacity: 0.75;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: auto;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* Trim Form Card */
