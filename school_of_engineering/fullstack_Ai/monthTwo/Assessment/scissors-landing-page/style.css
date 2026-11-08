@@ -314,18 +314,16 @@ a {
     margin-top: 64px;
 }
 
-/* Decorative Back Vector (Vector 2 in Figma) */
-.hero-vector-bg {
+/* Decorative Back Vector Spectrum (Vector 2 in Figma) */
+.hero-spectrum-bg {
     position: absolute;
-    width: 238px;
-    height: 251px;
-    background: var(--vector-bg);
-    transform: rotate(-29.82deg);
-    border-radius: 32px;
-    top: -24px;
-    left: calc(50% - 320px);
+    width: 246px;
+    height: 258px;
+    top: -28px;
+    left: calc(50% - 330px);
     z-index: 1;
-    opacity: 0.85;
+    pointer-events: none;
+    display: block;
 }
 
 /* Glassmorphism Card (Frame 29546) */
@@ -347,39 +345,12 @@ a {
     gap: 20px;
 }
 
-/* Card Icons Flow */
-.card-chain-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.link-icons-group {
-    display: flex;
-    align-items: center;
-}
-
-.link-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    margin-right: -14px;
-}
-
-.link-icon-end {
-    margin-right: 0;
-}
-
-.chain-arrow {
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
+.card-links-img {
+    width: 100%;
+    max-width: 384px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .glass-card-caption {
@@ -1392,8 +1363,12 @@ a {
         gap: 16px;
     }
 
-    .hero-vector-bg {
+    .hero-spectrum-bg {
         display: none;
+    }
+
+    .card-links-img {
+        max-width: 280px;
     }
 
     .glass-card {
