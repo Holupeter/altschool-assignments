@@ -550,9 +550,191 @@ a {
 }
 
 /* ==========================================================================
+   Pricing Section
+   ========================================================================== */
+.pricing-section {
+    width: 100%;
+    background-color: var(--neutral-white);
+    padding: 80px 24px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.pricing-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    max-width: 580px;
+}
+
+.pricing-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pricing-title-wrapper h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.pricing-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-main);
+}
+
+/* Pricing Cards Layout */
+.pricing-cards-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.pricing-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Basic and Teams Cards */
+.card-basic,
+.card-teams {
+    width: 379px;
+    min-height: 480px;
+    background: #FFFFFF;
+    border: 0.4px solid var(--primary-400);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 32px 40px;
+    z-index: 1;
+}
+
+.card-basic {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-teams {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Professional Card (Featured / Highlighted) */
+.card-pro.featured {
+    width: 410px;
+    min-height: 627px;
+    background: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 60px 48px;
+    color: var(--neutral-white);
+    z-index: 2;
+    transform: scale(1.02);
+}
+
+.plan-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.plan-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.plan-price {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.plan-target {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.check-icon {
+    flex-shrink: 0;
+}
+
+/* Pricing Bottom Actions */
+.pricing-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary-300);
+    color: var(--primary-300);
+    min-width: 200px;
+    height: 48px;
+}
+
+.btn-outline:hover {
+    background: rgba(0, 101, 254, 0.05);
+}
+
+.pricing-actions .primary-btn {
+    min-width: 200px;
+    height: 48px;
+}
+
+/* ==========================================================================
    Responsive Queries
    ========================================================================== */
 @media (max-width: 1024px) {
+    .pricing-cards-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .card-basic,
+    .card-teams,
+    .card-pro.featured {
+        width: 100%;
+        max-width: 480px;
+        min-height: auto;
+        border-radius: 12px;
+        transform: none;
+        padding: 40px;
+    }
     .stats-container {
         flex-direction: column;
         align-items: flex-start;
