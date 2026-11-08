@@ -1179,7 +1179,7 @@ a {
 .footer-glow-left-svg {
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     height: 100%;
     max-height: 561px;
     width: auto;
