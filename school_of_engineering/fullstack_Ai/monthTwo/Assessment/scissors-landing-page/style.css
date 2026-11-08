@@ -426,6 +426,10 @@ a {
     letter-spacing: -0.5px;
 }
 
+.highlight-possibilities {
+    color: #005AE2;
+}
+
 .stats-grid {
     display: flex;
     align-items: flex-start;
