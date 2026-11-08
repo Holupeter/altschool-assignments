@@ -142,9 +142,11 @@ a {
     gap: 8px;
 }
 
-.logo-icon {
-    display: flex;
-    align-items: center;
+.header-logo-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo-divider {
