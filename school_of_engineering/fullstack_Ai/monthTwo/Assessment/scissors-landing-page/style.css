@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-300: #0065FE;
+    --primary-400: #005AE2;
+    --text-main: #141414;
+    --neutral-white: #FFFFFF;
+    --neutral-gray-bg: #F8F7F7;
+    --vector-bg: #E2E9F0;
+    --font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-main);
+    background-color: var(--neutral-white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+/* ==========================================================================
+   Hero Section Container & Aurora Glows
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 1024px;
+    background: var(--neutral-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Aurora Glow Backgrounds */
+.aurora-container {
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 405px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.aurora-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+}
+
+.aurora-red {
+    width: 200px;
+    height: 215px;
+    left: 15%;
+    top: 0;
+    background: #D60505;
+}
+
+.aurora-green {
+    width: 200px;
+    height: 215px;
+    left: 40%;
+    top: 12px;
+    background: #067808;
+}
+
+.aurora-yellow {
+    width: 270px;
+    height: 290px;
+    right: 10%;
+    top: 112px;
+    background: #EAC81F;
+}
+
+/* ==========================================================================
+   Header / Navbar
+   ========================================================================== */
+.navbar {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1150px;
+    height: 44px;
+    margin-top: 24px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--primary-300);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-300);
+    letter-spacing: -0.5px;
+}
+
+/* Navigation Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.nav-links a.active {
+    color: var(--primary-300);
+}
+
+.nav-links a:hover {
+    color: var(--primary-300);
+}
+
+.has-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.chevron-icon {
+    transition: transform 0.2s ease;
+}
+
+.has-dropdown:hover .chevron-icon {
+    transform: translateY(2px);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.login-btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-300);
+}
+
+.login-btn:hover {
+    opacity: 0.85;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--primary-300);
+    color: var(--neutral-white);
+}
+
+.primary-btn:hover {
+    background: var(--primary-400);
+    box-shadow: 0 4px 14px rgba(0, 101, 254, 0.25);
+}
+
+.link-btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-300);
+    padding: 12px 0;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Hero Content
+   ========================================================================== */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 948px;
+    width: 100%;
+    margin-top: 80px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.highlight-text {
+    position: relative;
+    color: var(--primary-400);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.underline-vector {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    pointer-events: none;
+}
+
+.hero-description {
+    max-width: 781px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--text-main);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+/* ==========================================================================
+   Hero Visual & Glassmorphism Card
+   ========================================================================== */
+.hero-visual-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+/* Decorative Back Vector (Vector 2 in Figma) */
+.hero-vector-bg {
+    position: absolute;
+    width: 238px;
+    height: 251px;
+    background: var(--vector-bg);
+    transform: rotate(-29.82deg);
+    border-radius: 32px;
+    top: -24px;
+    left: calc(50% - 320px);
+    z-index: 1;
+    opacity: 0.85;
+}
+
+/* Glassmorphism Card (Frame 29546) */
+.glass-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 768px;
+    padding: 40px 60px;
+    background: rgba(254, 254, 254, 0.1);
+    border: 0.5px solid var(--primary-400);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 90, 226, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Card Icons Flow */
+.card-chain-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-icons-group {
+    display: flex;
+    align-items: center;
+}
+
+.link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-right: -14px;
+}
+
+.link-icon-end {
+    margin-right: 0;
+}
+
+.chain-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.glass-card-caption {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: var(--text-main);
+    max-width: 648px;
+}
+
+/* Pedestal / Ground Shadow (Group 3 in Figma) */
+.hero-pedestal {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--neutral-gray-bg) 100%);
+}
+
+.pedestal-ellipse {
+    width: 956px;
+    max-width: 90%;
+    height: 49px;
+    background: linear-gradient(180deg, rgba(226, 233, 240, 0.7) 10.68%, rgba(220, 228, 235, 0.7) 44.01%, rgba(226, 233, 240, 0) 100%);
+    filter: drop-shadow(0px 8px 16px rgba(18, 36, 89, 0.2));
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   Responsive Queries
+   ========================================================================== */
+@media (max-width: 992px) {
+    .navbar {
+        gap: 20px;
+    }
+
+    .nav-links ul {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .glass-card {
+        max-width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Can be hooked to a mobile hamburger menu later */
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-vector-bg {
+        display: none;
+    }
+
+    .glass-card {
+        padding: 24px 16px;
+    }
+}
+
