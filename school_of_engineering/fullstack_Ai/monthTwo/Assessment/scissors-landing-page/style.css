@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Gilroy Font Faces (Local Assets)
-   ========================================================================== */
+/* Gilroy Font Faces */
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
@@ -33,9 +31,7 @@
     font-display: swap;
 }
 
-/* ==========================================================================
-   Base & Reset
-   ========================================================================== */
+/* Base */
 *,
 *::before,
 *::after {
@@ -69,9 +65,7 @@ a {
     transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-/* ==========================================================================
-   Hero Section Container & Aurora Glows
-   ========================================================================== */
+/* Hero Section Container */
 .hero-section {
     position: relative;
     width: 100%;
@@ -127,9 +121,7 @@ a {
     background: #EAC81F;
 }
 
-/* ==========================================================================
-   Header / Navbar
-   ========================================================================== */
+/* Navbar */
 .navbar {
     position: relative;
     z-index: 10;
@@ -255,9 +247,7 @@ a {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   Hero Content
-   ========================================================================== */
+/* Hero Content */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -310,9 +300,7 @@ a {
     gap: 56px;
 }
 
-/* ==========================================================================
-   Hero Visual & Glassmorphism Card
-   ========================================================================== */
+/* Hero Visual Card */
 .hero-visual-wrapper {
     position: relative;
     z-index: 10;
@@ -421,9 +409,7 @@ a {
     border-radius: 50%;
 }
 
-/* ==========================================================================
-   Stats / Possibilities Section
-   ========================================================================== */
+/* Possibilities Section */
 .stats-section {
     width: 100%;
     background-color: #F9FBFD;
@@ -478,9 +464,7 @@ a {
     max-width: 150px;
 }
 
-/* ==========================================================================
-   Why Choose Scissors Section
-   ========================================================================== */
+/* Why Choose Scissors Section */
 .why-section {
     width: 100%;
     background-color: var(--neutral-white);
@@ -582,9 +566,7 @@ a {
     color: var(--text-main);
 }
 
-/* ==========================================================================
-   Pricing Section
-   ========================================================================== */
+/* Pricing Section */
 .pricing-section {
     width: 100%;
     background-color: var(--neutral-white);
@@ -749,9 +731,7 @@ a {
     height: 48px;
 }
 
-/* ==========================================================================
-   Trim URL Form Section
-   ========================================================================== */
+/* Trim URL Form Section */
 .trim-section {
     position: relative;
     width: 100%;
@@ -886,8 +866,12 @@ a {
     box-shadow: 0 4px 14px rgba(0, 90, 226, 0.35);
 }
 
-.magic-wand-icon {
+.magic-wand-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
     flex-shrink: 0;
+    display: block;
 }
 
 /* Disclaimer text */
