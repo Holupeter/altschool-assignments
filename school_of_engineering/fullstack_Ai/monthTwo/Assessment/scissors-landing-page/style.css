@@ -281,11 +281,12 @@ a {
 
 .underline-vector {
     position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 16px;
+    bottom: -10px;
+    left: 70px;
+    width: 173.63px;
+    height: auto;
     pointer-events: none;
+    display: block;
 }
 
 .hero-description {
