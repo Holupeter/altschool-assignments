@@ -935,31 +935,25 @@ a {
     overflow: hidden;
 }
 
-/* Ambient Subtle Decorative Backgrounds */
-.faqs-bg-glow {
+/* FAQs Ambient Wave SVGs */
+.faqs-wave-top-left {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
+    left: 0;
+    top: 0;
+    max-height: 860px;
+    width: auto;
     pointer-events: none;
     z-index: 1;
 }
 
-.faqs-glow-left {
-    width: 500px;
-    height: 500px;
-    left: -200px;
-    top: 50px;
-    background: linear-gradient(135deg, rgba(158, 230, 247, 0.25) 0%, rgba(0, 90, 226, 0.1) 100%);
-    opacity: 0.7;
-}
-
-.faqs-glow-right {
-    width: 600px;
-    height: 600px;
-    right: -250px;
-    bottom: 50px;
-    background: linear-gradient(315deg, rgba(158, 230, 247, 0.25) 0%, rgba(0, 90, 226, 0.12) 100%);
-    opacity: 0.7;
+.faqs-wave-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 440px;
+    width: auto;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .faqs-container {
