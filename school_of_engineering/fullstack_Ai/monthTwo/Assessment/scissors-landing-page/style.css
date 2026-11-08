@@ -317,13 +317,14 @@ a {
 /* Decorative Back Vector Spectrum (Vector 2 in Figma) */
 .hero-spectrum-bg {
     position: absolute;
-    width: 246px;
-    height: 258px;
-    top: -28px;
-    left: calc(50% - 330px);
+    width: 238.55px;
+    height: 251.2px;
+    top: -18px;
+    left: calc(45% - 330px);
     z-index: 1;
     pointer-events: none;
     display: block;
+    transform: rotate(353.82deg);
 }
 
 /* Glassmorphism Card (Frame 29546) */
@@ -332,34 +333,38 @@ a {
     z-index: 2;
     width: 100%;
     max-width: 768px;
+    height: 224px;
     padding: 40px 60px;
     background: rgba(254, 254, 254, 0.1);
     border: 0.5px solid var(--primary-400);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(212px);
+    -webkit-backdrop-filter: blur(212px);
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 90, 226, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .card-links-img {
     width: 100%;
     max-width: 384px;
-    height: auto;
+    height: 80px;
     object-fit: contain;
     display: block;
+    align-self: flex-start;
 }
 
 .glass-card-caption {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: var(--text-main);
     max-width: 648px;
+    height: 48px;
+
 }
 
 /* Pedestal / Ground Shadow (Group 3 in Figma) */
