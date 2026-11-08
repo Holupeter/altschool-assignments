@@ -1231,6 +1231,13 @@ a {
     color: var(--text-main);
 }
 
+.footer-logo-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
 .footer-socials {
     display: flex;
     align-items: center;
@@ -1238,16 +1245,23 @@ a {
 }
 
 .social-link {
-    color: var(--text-main);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.social-link:hover {
-    color: var(--primary-300);
-    transform: translateY(-2px);
+.social-link img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover img {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.8;
 }
 
 /* Footer Navigation Grid */
