@@ -1163,9 +1163,7 @@ a {
     box-shadow: 0 6px 20px rgba(0, 90, 226, 0.4);
 }
 
-/* ==========================================================================
-   Footer Section
-   ========================================================================== */
+/* Footer Section */
 .footer {
     position: relative;
     width: 100%;
@@ -1215,7 +1213,7 @@ a {
     gap: 64px;
 }
 
-/* Brand & Socials */
+/* Socials */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -1281,7 +1279,7 @@ a {
     gap: 12px;
 }
 
-/* Explicit row/col mapping to align Row 2 headers (Resources, Features, Legal) on the same horizontal line */
+/* Row 2 headers (Resources, Features, Legal) on the same horizontal line */
 .footer-group-why { grid-column: 1; grid-row: 1; }
 .footer-group-solutions { grid-column: 2; grid-row: 1; }
 .footer-group-products { grid-column: 3; grid-row: 1; }
