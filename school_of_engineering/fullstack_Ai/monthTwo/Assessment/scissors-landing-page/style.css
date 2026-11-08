@@ -922,9 +922,7 @@ a {
     color: var(--primary-400);
 }
 
-/* ==========================================================================
-   FAQs Section (Native Accordion)
-   ========================================================================== */
+/* FAQs Section */
 .faqs-section {
     position: relative;
     width: 100%;
@@ -935,7 +933,7 @@ a {
     overflow: hidden;
 }
 
-/* FAQs Ambient Wave SVGs */
+/* Wave SVGs */
 .faqs-wave-top-left {
     position: absolute;
     left: 0;
@@ -971,6 +969,13 @@ a {
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+.faq-accent-line {
+    width: 5px;
+    height: 48px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .faqs-header h2 {
@@ -1069,9 +1074,7 @@ a {
     color: var(--text-main);
 }
 
-/* ==========================================================================
-   Revolutionizing Link Optimization CTA Section
-   ========================================================================== */
+/* Revolutionizing Link Optimization CTA Section */
 .cta-section {
     position: relative;
     width: 100%;
@@ -1084,7 +1087,7 @@ a {
     overflow: hidden;
 }
 
-/* CTA Ambient Wave SVGs */
+/* Wave SVGs */
 .cta-waves-right {
     position: absolute;
     left: 0;
@@ -1156,7 +1159,7 @@ a {
     overflow: hidden;
 }
 
-/* Footer Ambient Glows */
+/* Ambient Glows */
 .footer-glow-left-svg {
     position: absolute;
     left: 0;
