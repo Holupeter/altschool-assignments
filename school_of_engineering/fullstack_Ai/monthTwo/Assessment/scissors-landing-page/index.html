@@ -6,7 +6,7 @@
     <title>Scissor - URL Shortening Solution</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -605,5 +605,23 @@
         </div>
     </footer>
 
+    <!-- Return to Top Floating Button -->
+    <a href="#top" class="return-to-top" id="returnToTop" aria-label="Return to top" title="Return to top">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Return to Top Visibility Handler -->
+    <script>
+        const returnToTopBtn = document.getElementById('returnToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                returnToTopBtn.classList.add('visible');
+            } else {
+                returnToTopBtn.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -15,3 +15,4 @@ Repository containing practical projects, coursework, and assessments for the **
 
 ## 👤 Author
 - **Peter O.** ([@Holupeter](https://github.com/Holupeter))
+

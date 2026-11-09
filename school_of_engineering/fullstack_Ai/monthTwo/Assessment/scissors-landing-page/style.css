@@ -32,6 +32,16 @@
 }
 
 /* Base */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -1465,4 +1475,55 @@ a {
         justify-content: center;
     }
 }
+
+/* Return to Top Floating Button */
+.return-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary-300);
+    color: var(--neutral-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 101, 254, 0.35);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.return-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.return-to-top:hover {
+    background: var(--primary-400);
+    color: var(--neutral-white);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 90, 226, 0.45);
+}
+
+.return-to-top:focus-visible {
+    outline: 2px solid var(--primary-400);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .return-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
 
