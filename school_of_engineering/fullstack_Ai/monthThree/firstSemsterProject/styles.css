@@ -232,10 +232,6 @@ ul {
 
 /* features */
 
-/* ==========================================================================
-   Step 3C: Why You Should Join Chatter Section
-   ========================================================================== */
-
 .features-section {
   padding-block: 80px; /* TODO: confirm exact top/bottom spacing in Figma */
   background-color: #ffffff;
@@ -302,5 +298,145 @@ ul {
 @media (max-width: 900px) {
   .features-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* testimonals */
+
+
+
+/* Testimonial Quote Block */
+.testimonial-section {
+  padding-block: 80px;
+  background-color: #fdf6e9; /* TODO: exact warm/cream testimonial background hex from Figma */
+}
+
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  gap: 56px; /* TODO: confirm exact gap between portrait and quote in Figma */
+}
+
+.testimonial-avatar {
+  width: 240px; /* TODO: confirm exact circle diameter in Figma */
+  height: 240px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-body {
+  max-width: 720px;
+}
+
+.testimonial-body blockquote {
+  margin: 0 0 24px;
+}
+
+.testimonial-body blockquote p {
+  margin: 0;
+  font-size: 20px; /* TODO: confirm quote font size/line-height in Figma */
+  line-height: 32px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+.testimonial-author strong {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.testimonial-author span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4b5563; /* TODO: confirm subtitle/role hex in Figma */
+}
+
+/* Closing Section (3 Portraits Cluster + CTA) */
+.closing-cta {
+  padding-block: 88px;
+  background-color: #ffffff;
+}
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.community-avatars {
+  position: relative;
+  min-height: 320px;
+}
+
+.avatar-circle {
+  position: absolute;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/* Staggered positions—adjust left/top/size to match Frame 38/39 in Figma */
+.avatar-1 {
+  width: 140px;
+  height: 140px;
+  top: 0;
+  left: 48px;
+}
+
+.avatar-2 {
+  width: 154px;
+  height: 158px;
+  top: 24px;
+  right: 24px;
+}
+
+.avatar-3 {
+  width: 148px;
+  height: 148px;
+  bottom: 0;
+  left: 110px;
+}
+
+.closing-content h2 {
+  margin: 0 0 16px;
+  font-size: 32px; /* TODO: confirm 32-48 vs 48-72 in Figma */
+  line-height: 48px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.closing-content p {
+  margin: 0 0 28px;
+  font-size: 18px; /* Desktop/Body/18-27 */
+  line-height: 27px;
+  font-weight: 500;
+  color: #111111;
+}
+
+@media (max-width: 900px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .testimonial-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .closing-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
