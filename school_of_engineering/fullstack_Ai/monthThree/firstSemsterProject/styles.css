@@ -444,8 +444,9 @@ ul {
 /* footer */
 
 .site-footer {
-  padding-block: 72px; /* TODO: confirm exact top/bottom footer padding in Figma */
-  background-color: #fdf6e9; /* TODO: exact warm/cream footer background hex from Figma */
+  padding-block: 72px; 
+  background-color: rgba(255, 237, 204, 0.5); 
+  min-height: 402px;
 }
 
 .footer-grid {
@@ -456,7 +457,8 @@ ul {
 }
 
 .footer-brand .brand-logo {
-  font-size: 28px; /* TODO: confirm exact footer wordmark size in Figma */
+  font-size: 48px;
+  line-height: 72px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -464,14 +466,14 @@ ul {
 .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px; /* TODO: confirm exact gap between footer columns in Figma */
+  gap: 120px; 
 }
 
 .footer-columns h3 {
   margin: 0 0 20px;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
   color: #111111;
 }
 
@@ -480,25 +482,15 @@ ul {
 }
 
 .footer-columns a {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
   text-decoration: none;
-  color: #4b5563; /* TODO: confirm exact footer link hex from Figma */
+  color: #4b5563; 
 }
 
 .footer-columns a:hover,
 .footer-columns a:focus-visible {
   text-decoration: underline;
   color: #111111;
-}
-
-@media (max-width: 900px) {
-  .footer-grid {
-    flex-direction: column;
-    gap: 36px;
-  }
-
-  .footer-columns {
-    gap: 40px;
-  }
 }
