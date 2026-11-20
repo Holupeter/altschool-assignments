@@ -440,3 +440,65 @@ ul {
     gap: 40px;
   }
 }
+
+/* footer */
+
+.site-footer {
+  padding-block: 72px; /* TODO: confirm exact top/bottom footer padding in Figma */
+  background-color: #fdf6e9; /* TODO: exact warm/cream footer background hex from Figma */
+}
+
+.footer-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.footer-brand .brand-logo {
+  font-size: 28px; /* TODO: confirm exact footer wordmark size in Figma */
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px; /* TODO: confirm exact gap between footer columns in Figma */
+}
+
+.footer-columns h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.footer-columns li + li {
+  margin-top: 12px;
+}
+
+.footer-columns a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #4b5563; /* TODO: confirm exact footer link hex from Figma */
+}
+
+.footer-columns a:hover,
+.footer-columns a:focus-visible {
+  text-decoration: underline;
+  color: #111111;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .footer-columns {
+    gap: 40px;
+  }
+}
