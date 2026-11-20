@@ -229,3 +229,78 @@ ul {
     height: 300px;
   }
 }
+
+/* features */
+
+/* ==========================================================================
+   Step 3C: Why You Should Join Chatter Section
+   ========================================================================== */
+
+.features-section {
+  padding-block: 80px; /* TODO: confirm exact top/bottom spacing in Figma */
+  background-color: #ffffff;
+}
+
+.features-section h2 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 32px; /* TODO: confirm 32-48 vs 48-72 in Figma */
+  line-height: 48px;
+  font-weight: 700;
+  color: #111111; /* Black/700 */
+}
+
+.section-intro {
+  margin: 0 auto 56px;
+  max-width: 780px; /* TODO: adjust max-width to match Figma text measure */
+  text-align: center;
+  font-size: 18px; /* Desktop/Body/18-27 */
+  line-height: 27px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px; /* TODO: confirm exact card gap in Figma */
+}
+
+.feature-card {
+  padding: 28px 24px; /* TODO: confirm exact inner card padding in Figma */
+  border: 1px solid #e5e7eb; /* TODO: exact card border hex from Figma */
+  border-radius: 8px; /* TODO: exact card radius from Figma */
+  background-color: #ffffff;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background-color: #f3f4f6; /* TODO: exact icon badge fill from Figma */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  margin: 0 0 12px;
+  font-size: 24px; /* aligns with your 24-36 scale */
+  line-height: 36px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 16px; /* TODO: confirm card body size/line-height in Figma */
+  line-height: 24px;
+  color: #4b5563; /* TODO: exact card description hex from Figma */
+}
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
