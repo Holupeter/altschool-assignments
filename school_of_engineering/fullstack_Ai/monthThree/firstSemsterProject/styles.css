@@ -455,62 +455,87 @@ ul {
 
 /* testimonals */
 
-
-
-/* Testimonial Quote Block */
 .testimonial-section {
-  padding-block: 80px;
-  background-color: #fdf6e9; /* TODO: exact warm/cream testimonial background hex from Figma */
+  min-height: 492px;
+  padding-block: 60px;
+  background-color: rgba(255, 237, 204, 0.5); 
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-section .container {
+  max-width: 1440px;
+  padding-inline: clamp(24px, 5.5vw, 84px);
 }
 
 .testimonial-card {
   display: flex;
   align-items: center;
-  gap: 56px; /* TODO: confirm exact gap between portrait and quote in Figma */
+  gap: 56px; 
+  width: 100%;
 }
 
+.testimonial-card img,
 .testimonial-avatar {
-  width: 240px; /* TODO: confirm exact circle diameter in Figma */
-  height: 240px;
-  border-radius: 999px;
+  width: 300px;
+  height: 292px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .testimonial-body {
-  max-width: 720px;
+  max-width: 924px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .testimonial-body blockquote {
-  margin: 0 0 24px;
+  margin: 0 0 48px; 
 }
 
 .testimonial-body blockquote p {
   margin: 0;
-  font-size: 20px; /* TODO: confirm quote font size/line-height in Figma */
-  line-height: 32px;
-  font-weight: 500;
-  color: #111111;
+  max-width: 924px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #111111; 
 }
 
 .testimonial-author {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 24px; 
   font-style: normal;
-  margin-bottom: 24px;
 }
 
 .testimonial-author strong {
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
   color: #111111;
 }
 
 .testimonial-author span {
-  font-size: 16px;
-  line-height: 24px;
-  color: #4b5563; /* TODO: confirm subtitle/role hex in Figma */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #111111;
+}
+
+.testimonial-body .btn {
+  box-sizing: border-box;
+  width: 157px;
+  height: 56px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  border-radius: 8px;
 }
 
 /* Closing Section (3 Portraits Cluster + CTA) */
@@ -561,7 +586,7 @@ ul {
 
 .closing-content h2 {
   margin: 0 0 16px;
-  font-size: 32px; /* TODO: confirm 32-48 vs 48-72 in Figma */
+  font-size: 32px; 
   line-height: 48px;
   font-weight: 700;
   color: #111111;
@@ -569,7 +594,7 @@ ul {
 
 .closing-content p {
   margin: 0 0 28px;
-  font-size: 18px; /* Desktop/Body/18-27 */
+  font-size: 18px; 
   line-height: 27px;
   font-weight: 500;
   color: #111111;
@@ -582,9 +607,16 @@ ul {
     gap: 32px;
   }
 
+  .testimonial-card img,
   .testimonial-avatar {
     width: 180px;
     height: 180px;
+  }
+
+  .testimonial-author {
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .closing-grid {
