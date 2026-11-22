@@ -44,42 +44,67 @@ ul {
 
 .site-header {
     background-color: #ffffff;
-    opacity: 100%;
-    padding-block: 20px;
+    border-bottom: 1px solid #D0D0D0; 
+    height: 98px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.site-header .container {
+    max-width: 1440px;
+    padding-inline: clamp(24px, 5vw, 72px);
+    height: 100%;
 }
 
 .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: clamp(24px, 6vw, 174px); 
+    height: 100%;
 }
 
 .brand-logo {
-    font-size: 20px;
+    font-style: normal;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 48px;
+    line-height: 72px;
     text-decoration: none;
-    color: #543EE0;
+    color: #543EE0; 
+    display: inline-flex;
+    align-items: center;
+}
+
+.primary-nav {
+    margin-left: auto;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px; 
 }
 
 .nav-list a {
+    font-style: normal;
+    font-weight: 700;
     font-size: 16px;
-    font-weight: 500;
+    line-height: 24px;
     text-decoration: none;
     color: #111111;
+    transition: color 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+    color: #543EE0;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px; 
 }
 
 .btn {
@@ -91,17 +116,74 @@ ul {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.header-actions .btn {
+    box-sizing: border-box;
+    width: 157px;
+    height: 56px;
+    padding: 8px 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 .btn-secondary {
     background-color: #ffffff;
-    color: #111111;
-    border: 1px solid #543EE0;
+    color: #111111; 
+    border: 1px solid #543EE0; 
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background-color: rgba(84, 62, 224, 0.05);
 }
 
 .btn-primary {
-    background-color: #543EE0;
+    background-color: #543EE0; 
     color: #ffffff;
+    border: 1px solid #543EE0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #4330b8;
+    border-color: #4330b8;
+}
+
+@media (max-width: 992px) {
+    .site-header {
+        height: auto;
+        min-height: 72px;
+        padding-block: 12px;
+    }
+
+    .site-header .container {
+        padding-inline: 24px;
+    }
+
+    .site-header .brand-logo {
+        font-size: clamp(28px, 5vw, 40px);
+        line-height: 1.2;
+    }
+
+    .header-inner {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .primary-nav {
+        margin-left: 0;
+    }
+
+    .header-actions .btn {
+        width: auto;
+        height: 48px;
+        padding: 8px 20px;
+        font-size: 16px;
+    }
 }
 
 /* hero */
@@ -233,71 +315,104 @@ ul {
 /* features */
 
 .features-section {
-  padding-block: 80px; /* TODO: confirm exact top/bottom spacing in Figma */
+  padding-block: 80px;
   background-color: #ffffff;
 }
 
+.features-section .container {
+  max-width: 1088px; 
+}
+
 .features-section h2 {
-  margin: 0 0 16px;
+  max-width: 601px;
+  margin: 0 auto 24px;
   text-align: center;
-  font-size: 32px; /* TODO: confirm 32-48 vs 48-72 in Figma */
-  line-height: 48px;
   font-weight: 700;
-  color: #111111; /* Black/700 */
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 72px;
+  color: #111111; 
 }
 
 .section-intro {
-  margin: 0 auto 56px;
-  max-width: 780px; /* TODO: adjust max-width to match Figma text measure */
-  text-align: center;
-  font-size: 18px; /* Desktop/Body/18-27 */
+  max-width: 1040px;
+  margin: 0 auto 54px;
+  text-align: start;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 27px;
-  font-weight: 500;
-  color: #111111;
+  color: #111111; 
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px; /* TODO: confirm exact card gap in Figma */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  max-width: 1014px;
+  margin-inline: auto;
 }
 
 .feature-card {
-  padding: 28px 24px; /* TODO: confirm exact inner card padding in Figma */
-  border: 1px solid #e5e7eb; /* TODO: exact card border hex from Figma */
-  border-radius: 8px; /* TODO: exact card radius from Figma */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 18px;
+  gap: 12px;
+  width: 306px;
+  min-height: 324px;
+  border: 1px solid #D0D0D0; 
+  border-radius: 8px;
   background-color: #ffffff;
 }
 
 .feature-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 20px;
-  border-radius: 999px;
-  background-color: #f3f4f6; /* TODO: exact icon badge fill from Figma */
+  width: 92px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 92px;
+  height: 88px;
+  display: block;
 }
 
 .feature-card h3 {
-  margin: 0 0 12px;
-  font-size: 24px; /* aligns with your 24-36 scale */
-  line-height: 36px;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
-  color: #111111;
+  font-size: 24px;
+  line-height: 36px;
+  color: #111111; 
 }
 
 .feature-card p {
   margin: 0;
-  font-size: 16px; /* TODO: confirm card body size/line-height in Figma */
-  line-height: 24px;
-  color: #4b5563; /* TODO: exact card description hex from Figma */
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #626262; 
 }
 
 @media (max-width: 900px) {
+  .features-section h2 {
+    line-height: 44px;
+  }
+
   .features-grid {
-    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    min-height: auto;
   }
 }
 
@@ -463,8 +578,7 @@ ul {
 
 .footer-brand .brand-logo {
   display: inline-block;
-  margin-top: 12px; /* aligns 72px top offset with 60px heading top offset */
-  font-family: 'DM Sans', sans-serif;
+  margin-top: 12px; 
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -495,11 +609,10 @@ ul {
 }
 
 .footer-columns li + li {
-  margin-top: 16px; /* 167px - (124px + 27px) = 16px row spacing */
+  margin-top: 16px; 
 }
 
 .footer-columns a {
-  font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
