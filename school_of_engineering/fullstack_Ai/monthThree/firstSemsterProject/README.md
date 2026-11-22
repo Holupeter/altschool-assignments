@@ -3,7 +3,7 @@
 > **AltSchool Africa | School of Engineering**  
 > **Track**: Fullstack Engineering (Fullstack AI)  
 > **Course Milestone**: First Semester Capstone Project 
-> **Live Landing Page**: [Scissor Landing Page](https://holupeter.github.io/altschool-assignments/school_of_engineering/fullstack_Ai/monthThree/firstSemsterProject)
+> **Live Landing Page**: [CHATTER Landing Page](https://holupeter.github.io/altschool-assignments/school_of_engineering/fullstack_Ai/monthThree/firstSemsterProject)
 > **Figma Design Reference**: [View Figma Design](https://www.figma.com/design/TXzuoMAwGEIfWcAq0HbBNY/purposed?node-id=7-8&t=jNjEkb4uN89t0mLm-1) 
 
 
