@@ -13,6 +13,7 @@ body {
     margin: 0;
     font-family: "DM Sans";
     font-size: 18px;
+    font-style: normal;
     line-height: 27px;
     letter-spacing: 0;
 }
@@ -66,7 +67,6 @@ ul {
 }
 
 .brand-logo {
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 72px;
@@ -87,7 +87,6 @@ ul {
 }
 
 .nav-list a {
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -124,7 +123,6 @@ ul {
     width: 157px;
     height: 56px;
     padding: 8px 16px;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
@@ -189,7 +187,8 @@ ul {
 /* hero */
 .hero {
     position: relative;
-    min-height: 540px;
+    height: 765px;
+    min-height: 765px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -213,30 +212,61 @@ ul {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.55) ;
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 984px;
-    max-height: 332px;
+    width: 100%;
+    margin-inline: auto;
     color: #ffffff;
 }
 
 .hero-content h1 {
-    margin: 0 0 16px;
-    font-size: 48px;
+    max-width: 984px;
+    margin: 0 0 24px;
+    font-weight: 700;
+    font-size: clamp(32px, 3.5vw, 48px);
     line-height: 72px;
-    font-weight: 500;
-    letter-spacing: 0;
+    color: #FFFFFF;
 }
 
 .hero-subtitle {
-    margin: 0 0 28px;
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 680px;
+    max-width: 740px;
+    margin: 0 0 36px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.hero-content .btn {
+    box-sizing: border-box;
+    width: 157px;
+    height: 56px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        height: auto;
+        min-height: 540px;
+        padding-block: 80px;
+    }
+
+    .hero-content h1 {
+        line-height: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
 
 
